@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Bolsa de Trabajo</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            color: white
+        }    
+
+        body{
+            background-image: url(img/guardia5.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h3{
+    width: 1000px;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+    background-color: #0b0929;
+}
+.formulario{
+    /* float:left; */
+    /* text-align: center; */
+    font-size: x-large;
+    width: 600px;
+    background-color: rgb(70, 77, 70);
+    padding: 30px;
+    margin: 20px auto;
+    
+
+   
+}
+.label{
+    background-color: aliceblue;
+}
+.botones{
+    font-size: xx-large;
+    background-color: #64a8f7;
+}
+
+        .formulario_label{
+            
+            display: block;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .formulario_grupo_input{
+            position: relative;
+        }
+        .formulario_input,
+        .formulario_select{
+            width: 100%;
+            background-color: #fff;
+            border: 3px solid transparent;
+            border-radius: 3px;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 40px 0 10px;
+        }
+
+        .formulario_input:focus{
+            border: #0075ff;
+            outline: none;
+            box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+        }
+
+
+        /* muestra el mensaje de error */
+        .formulario_input_error{
+            font-size: 12px;
+            margin-bottom: 0;
+            display: none;
+        }
+
+        .formulario_input_error_activo{
+            display: block;
+        }
+
+
+
+        .formulario_checkbox{
+            margin-right: 10px;
+        }
+
+        .formulario_mensaje{
+            height: 45px;
+            line-height: 45px;
+            background-color: #f66060;
+            padding: 0 15px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        .formulario_mensaje_activo{
+            display: block;
+        }
+        /* revisar las siguientes lineas */
+        .formulario_mensaje p{
+            margin: 0;
+        }
+
+        .formulario_grupo_btns{
+            display: block;
+            text-align: center;
+        }
+
+        .formulario_btn{
+            height: 45px;
+            line-height: 45px;
+            width: 30%;
+            background-color: rgb(7, 11, 29);
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: .1s ease all;
+        }
+
+        /* sombra de los btns */
+        .formulario_btn:hover{
+            box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+        }
+
+        .formulario_mensaje_exito{
+            font-size: 14px;
+            color: #119200;
+            display: none;
+        }
+
+        .formulario_mensaje_exito_activo{
+            display: block;
+        }
+
+        .formulario_grupo_incorrecto .formulario_label{
+            color: #bb2929;
+        }
+
+        .formulario_grupo_incorrecto .formulario_input{
+            border: 3px solid #bb2929;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav class="menu">
+            <nav class="menu">
+                <a href="#"
+                  ><img style="float: left" src="img/logo.png" alt="logo"
+                /></a>
+                <a href="#"
+                  ><img style="float: left" src="img/slogan3.png" alt="slogan"
+                /></a>
+                <ul>
+                  <li>
+                    <a href="OrobioMadelyne.html">Inicio </a>
+                  </li>
+                  <li>
+                    <a href="CristhianPiguave.html">Servicios</a>
+                  </li>
+                  <li>
+                    <a href="QuijijeAntony.html">Nuestro Equipo </a>
+                  </li>
+                  <li>
+                    <a href="MoranJoan.html">Seguridad Electrónica</a>
+                  </li>
+                  <li>
+                    <a href="OrobioMadelyne2.html">Preguntas Frecuentes</a>
+                  </li>
+                  <li>
+                    <a href="ZuñigaKayler.html">Contacto </a>
+                  </li>
+                </ul>
+              </nav>
+    </header>
+    <main>
+            <h3>¿Te gustaría formar parte de nuestro equipo de trabajo?</h3>
+
+            <form class="formulario" id="formulario" onsubmit="return validar()">
+
+                <!-- Grupo nombres -->
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <label for="nombre" class="formulario_label">Nombres</label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Ingrese su nombre...">
+                    </div>
+                    <p class="formulario_input_error">
+                        El nombre solo puede contener letras y no puede estar vacío.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo Apellidos -->
+                <div class="formulario_grupo" id="grupo_apellido">
+                    <label for="apellido" class="formulario_label">Apellidos</label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Ingrese su apellido...">
+                    </div>
+                    <p class="formulario_input_error">
+                        El apellido solo puede contener letras y no puede estar vacío.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo telefono -->
+                <div class="formulario_grupo" id="grupo_telefono">
+                    <label for="telefono" class="formulario_label">Teléfono</label>
+                    <div class="formulario_grupo_input">
+                        <input type="tel" class="formulario_input" name="telefono" id="telefono" placeholder="Ingrese su numero telefónico...">
+                    </div>
+                    <p class="formulario_input_error">
+                        El telefono solo puede contener numeros, deben ser 10 y no puede estar vacío.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo Correo Electronico -->
+                <div class="formulario_grupo" id="grupo_correo">
+                    <label for="correo" class="formulario_label">Correo Electronico</label>
+                    <div class="formulario_grupo_input">
+                        <input type="email" class="formulario_input" name="correo" id="correo" placeholder="ingrese su correo electronico...">
+                    </div>
+                    <p class="formulario_input_error">
+                        El correo solo puede contener letras, numeros, puntos, guiones, guion bajo y no puede estar vacío.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo Radios Genero -->
+                <div class="formulario_grupo" id="grupo_genero">
+                    <label class="formulario_label">Genero</label>
+                    <div class="formulario_grupo_input">
+                        <input type="radio" class="formulario_radio" name="genero" id="genero1" value="F"/> Femenino
+                        <input type="radio" class="formulario_radio" name="genero" id="genero2" value="M"/> Masculino
+                        <input type="radio" class="formulario_radio" name="genero" id="genero3" value="O"/> Otro
+                    </div>
+                    <p class="formulario_input_error">
+                        Debe Seleccionar un Género.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo Estado Civil-->
+                <div class="formulario_grupo" id="grupo_estado_civil">
+                    <label class="formulario_label">Estado Civil</label>
+                    <div class="formulario_grupo_input">
+                        <select name="estadoC" id="estadoCivil" class="formulario_select">
+                            <option value="0">Seleccione...</option>
+                            <option value="sol">Soltero</option>
+                            <option value="cas">Casado</option>
+                            <option value="viu">Viudo</option>
+                            <option value="ot">Otro</option>
+                        </select>
+                    </div>
+                    <p class="formulario_input_error">
+                        Debe seleccionar un estado civil.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo fecha nacimiento -->
+                <div class="formulario_grupo" id="grupo_fecha_nac">
+                    <label for="fechaNac" class="formulario_label">Fecha de Nacimiento</label>
+                    <div class="formulario_grupo_input">
+                        <input type="date" class="formulario_input" name="fechaNac" id="fechaNac">
+                    </div>
+                    <p class="formulario_input_error">
+                        La fecha no puede estar vacìa, no puede ser superior a la actual, el año de nacimiento no puede ser menor a 1930 y la persona debe ser mayor a 18 años.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo vacantes-->
+                <div class="formulario_grupo" id="grupo_vacantes">
+                    <label for="vacante" class="formulario_label">Seleccione la vacante a postular</label>
+                    <div class="formulario_grupo_input">
+                        <select name="vacante" id="vacante" class="formulario_select">
+                            <option value="0">Seleccione...</option>
+                            <option value="1">Guardia de Seguridad Privada</option>
+                            <option value="2">Guardia de Ferretería</option>
+                            <option value="3">Vigilantes</option>
+                            <option value="4">Seguridad interna</option>
+                            <option value="5">Escoltas</option>
+                            <option value="6">Vigilante Supermercado</option>
+                            <option value="7">Seguridad Aeropuerto</option>
+                            <option value="8">Vigilante de Hoteles</option>
+                        </select>
+                    </div>
+                    <p class="formulario_input_error">
+                        Debe seleccionar una vacante.
+                    </p>
+                </div>
+    
+    
+                <!-- Grupo Radios tiene hijos -->
+                <div class="formulario_grupo" id="grupo_hijos">
+                    <label class="formulario_label">¿Tiene hijos?</label>
+                    <div class="formulario_grupo_input">
+                        <input type="radio" class="formulario_radio" name="hijos" id="hijosi" value="Si" onclick="CrearCampo()" /> Si
+                        <input type="radio" class="formulario_radio" name="hijos" id="hijosn" value="No" onclick="verificaNoCrearCampo()" /> No
+                    </div>
+                    <p class="formulario_input_error">
+                        Debe Seleccionar si tiene hijos.
+                    </p>
+                </div>
+
+                <div class="tieneHijos" id="SiTiene"></div>
+    
+    
+                <!-- Grupo: Terminos y Condiciones -->
+                <div class="formulario_grupo" id="grupo_terminos">
+                    <label class="formulario_label">
+                        <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos">
+                        Acepto los Terminos y Condiciones
+                    </label>
+                </div>
+    
+    
+                <div class="formulario_mensaje" id="formulario_mensaje">
+                    <p> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+    
+    
+                <div class="formulario_grupo formulario_grupo_btns">
+                    <button type="submit" class="formulario_btn">Enviar</button>
+                    <button type="reset" class="formulario_btn">Cancelar</button>
+                    <p class="formulario_mensaje_exito" id="formulario_mensaje_exito">Formulario enviado exitosamente!</p>
+                </div>
+    
+            </form>
+
+            <div class="clearFloat"></div>
+
+
+
+            <script>
+                const inputs = document.querySelectorAll('.formulario_input');
+const radiosGenero = document.getElementsByName("genero");
+const selectEstado = document.getElementById("estadoCivil");
+const selectVacante = document.getElementById("vacante");
+const radioTieneHijos = document.getElementsByName("hijos");
+var mensajeError = document.querySelectorAll(".formulario_input_error");
+const formulario = document.getElementById('formulario');
+var valido = true;
+
+//Expresiones regulares
+const expresiones = {
+    letra : /^[a-z ,.'-]+$/i ,
+    correo : /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ,
+    telefonor : /^\d{10}$/
+}
+
+const validarFormulario = (e) => {
+    switch (e.target.name){ 
+        case "nombre":
+            validarCampo(expresiones.letra, e.target, 'nombre');
+        break;
+
+        case "apellido":
+            validarCampo(expresiones.letra, e.target, 'apellido');
+        break;
+
+        case "telefono": 
+            validarCampo(expresiones.telefonor, e.target, 'telefono');
+        break;
+
+        case "correo":
+            validarCampo(expresiones.correo, e.target, 'correo');
+        break;
+    }
+}
+
+
+const validarCampo = (expresion, input, campo) => {
+    if(expresion.test(input.value)){
+        document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_${campo} .formulario_input_error`).classList.remove('formulario_input_error_activo');
+        valido = true;
+    }else{
+        document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_${campo} .formulario_input_error`).classList.add('formulario_input_error_activo');
+        valido = false;
+    }
+}
+
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validarFormulario);
+    input.addEventListener('blur', validarFormulario);
+});
+
+
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const terminos = document.getElementById('terminos');
+    if(valido && terminos.checked){
+        formulario.reset();
+        document.getElementById('formulario_mensaje_exito').classList.add('formulario_mensaje_exito_activo');
+        eliminarError();
+
+        setTimeout(() =>{
+            document.getElementById('formulario_mensaje_exito').classList.remove('formulario_mensaje_exito_activo');
+
+        }, 5000);
+    } else{
+        document.getElementById('formulario_mensaje').classList.add('formulario_mensaje_activo');
+        setTimeout(() =>{
+            document.getElementById('formulario_mensaje').classList.remove('formulario_mensaje_activo');
+        }, 5000);
+    }
+});
+
+function eliminarError(){
+    document.getElementById('grupo_genero').classList.remove('formulario_grupo_incorrecto');
+    document.querySelector('#grupo_genero .formulario_input_error').classList.remove('formulario_input_error_activo');
+
+    document.getElementById('grupo_estado_civil').classList.remove('formulario_grupo_incorrecto');
+    document.querySelector('#grupo_estado_civil .formulario_input_error').classList.remove('formulario_input_error_activo');
+
+    document.getElementById('grupo_fecha_nac').classList.remove('formulario_grupo_incorrecto');
+    document.querySelector('#grupo_fecha_nac .formulario_input_error').classList.remove('formulario_input_error_activo');
+
+    document.getElementById('grupo_vacantes').classList.remove('formulario_grupo_incorrecto');
+    document.querySelector('#grupo_vacantes .formulario_input_error').classList.remove('formulario_input_error_activo');
+
+    document.getElementById('grupo_hijos').classList.remove('formulario_grupo_incorrecto');
+    document.querySelector('#grupo_hijos .formulario_input_error').classList.remove('formulario_input_error_activo');
+}
+
+
+function validar(event){
+    // var valido = true;
+
+    // validar nombres
+    if (inputs[0].value === ""){
+        valido = false;
+        document.getElementById('grupo_nombre').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_nombre .formulario_input_error').classList.add('formulario_input_error_activo');
+        
+    }
+
+
+    // validar apellidos
+    if (inputs[1].value === ""){
+        valido = false;
+        document.getElementById('grupo_apellido').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_apellido .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    // Validar telefono
+    if(inputs[2].value === ""){
+        valido = false;
+        document.getElementById('grupo_telefono').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_telefono .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    //valida email
+    if(inputs[3].value === ""){
+        valido = false;
+        document.getElementById('grupo_correo').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_correo .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    // validar genero //radio
+    let sel = false;
+    for (let i = 0; i < radiosGenero.length; i++) {
+        if (radiosGenero[i].checked) {
+            sel = true;  
+            break;
+        }
+    }
+    if (!sel) {
+        valido = false;
+        document.getElementById('grupo_genero').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_genero .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    // validar estado civil
+    if (selectEstado.value === null || selectEstado.selectedIndex < 0 ||  selectEstado.value === '0') {
+        valido = false;
+        document.getElementById('grupo_estado_civil').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_estado_civil .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    //validar fecha nacimiento
+    if(inputs[4].value === ""){
+        valido = false;
+        document.getElementById('grupo_fecha_nac').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_fecha_nac .formulario_input_error').classList.add('formulario_input_error_activo');
+    }else{
+        var dato = inputs[4].value;
+        var fechaN = new Date(dato);
+        var anioN = fechaN.getFullYear();
+        
+        var fechaActual = new Date();// fecha actual
+        var anioA =fechaActual.getFullYear();
+        
+        if(fechaN > fechaActual){
+            valido = false;
+            document.getElementById('grupo_fecha_nac').classList.add('formulario_grupo_incorrecto');
+            document.querySelector('#grupo_fecha_nac .formulario_input_error').classList.add('formulario_input_error_activo');
+        }else if(anioN < 1930){
+            valido = false;
+            document.getElementById('grupo_fecha_nac').classList.add('formulario_grupo_incorrecto');
+            document.querySelector('#grupo_fecha_nac .formulario_input_error').classList.add('formulario_input_error_activo');
+        }else if((anioA - anioN) <18){
+            valido = false;
+            document.getElementById('grupo_fecha_nac').classList.add('formulario_grupo_incorrecto');
+            document.querySelector('#grupo_fecha_nac .formulario_input_error').classList.add('formulario_input_error_activo');
+        }
+    }
+
+    //validar vacante
+    if(selectVacante.value === null || selectVacante.length < 0 || selectVacante.value === '0'){
+        valido = false;
+        document.getElementById('grupo_vacantes').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_vacantes .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+    //validar si tiene Hijos
+    
+    let sel2=false;
+    for (let i=0; i<radioTieneHijos.length; i++){
+        if(radioTieneHijos[i].checked){
+            sel2 = true;
+            break;
+        }
+    }
+
+    if(!sel2){
+        valido = false;
+        document.getElementById('grupo_hijos').classList.add('formulario_grupo_incorrecto');
+        document.querySelector('#grupo_hijos .formulario_input_error').classList.add('formulario_input_error_activo');
+    }
+
+
+
+
+
+    return valido;
+}
+            </script>
+    </main>
+    <footer>
+        <div class="footer">
+          <div class="elemento">
+            <h4>Certificaciones</h4>
+            <p>
+              Certificaciones internacionales de calidad y medio ambiente
+              confirman nuestra responsabilidad por otorgar un servicio diseñado y
+              orientado para cada uno de nuestros clientes.
+            </p>
+          </div>
+  
+          <div class="elemento">
+            <h4>Redes sociales</h4>
+            <div class="redes">
+              <a href="#"><img src="img/face.webp" alt="Facebook" /></a>
+              <a href="#"><img src="img/insta.webp" alt="Instagram" /></a>
+              <a
+                href="https://www.youtube.com/channel/UC2dOAw4yM1pLKIR20HuuInA/featured"
+                ><img src="img/youtube.png" alt="Youtube"
+              /></a>
+              <a href="#"><img src="img/twitter.jpg" alt="Twitter" /></a>
+            </div>
+          </div>
+  
+          <div class="elemento">
+            <h5>Ubicación</h5>
+            <p>
+              Av. Perimetral frente a la Cdla. Lomas de la Florida II en la Coop.
+              Enner Parrales
+            </p>
+          </div>
+        </div>
+        <div class="derechosReservados">
+          <p>Guayaquil- Ecuador © 2022. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+</body>
+</html>

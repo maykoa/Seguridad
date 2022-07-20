@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Servicios</title>
+    <link rel="shortcut icon" href="img/icono3.ico">
+    <link rel="stylesheet" href="estilo.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(img/guardia3.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .contenedor {
+            background-color: #fff;
+            margin-block: 5%;
+            margin-inline-start: 10%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+            overflow: hidden;
+            width: 600px;
+            max-width: 100%;
+        }
+
+        .encabezado h2 {
+            color: #fff;
+            text-align: center;
+            background: #404d48;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            background: #404d48;
+        }
+
+        .formulario {
+            padding: 30px 40px;
+        }
+
+        #formServicio{
+            padding: 20px;
+        }
+
+        #formServicio label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        #formServicio input {
+            border: 4px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            
+        }
+
+        #formServicio .radio{
+            border: 4px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 98%;
+            margin-top: 10px;
+        }
+
+        .btnradio{
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #formServicio .formItem{
+            border: 4px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 98%;
+
+        }
+
+        #formServicio input[type="radio" ]{
+            display: inline;
+        }
+
+        #formServicio button {
+            background-color: #404749;
+            border-radius: 4px;
+            color: #fff;
+            display: block;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 10px;
+            width: 30%;
+            margin: 10px auto;
+        }
+    </style>
+
+<body>
+    <header>
+        <nav class="menu" id="menu">
+            <a href="#"
+              ><img style="float: left" src="img/logo.png" alt="logo"
+            /></a>
+            <a href="#"
+              ><img style="float: left" src="img/slogan3.png" alt="slogan"
+            /></a>
+            <ul>
+              <li>
+                <a href="OrobioMadelyne.html">Inicio </a>
+              </li>
+              <li>
+                <a href="CristhianPiguave.html">Servicios</a>
+              </li>
+              <li>
+                <a href="QuijijeAntony.html">Nuestro Equipo </a>
+              </li>
+              <li>
+                <a href="MoranJoan.html">Seguridad Electrónica</a>
+              </li>
+              <li>
+                <a href="OrobioMadelyne2.html">Preguntas Frecuentes</a>
+              </li>
+              <li>
+                <a href="ZuñigaKayler.html">Contacto </a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="contenedor">
+        <div class="encabezado">
+            <h2> DATOS DEL USUARIO </h2>
+        </div>
+        <div class="Formulario">
+            <form id="formServicio">
+                <div>
+                    <label> Nombres:</label>
+                    <input type="text" placeholder="Ingrese sus nombres " id="nombres" class="formItem" />
+                </div>
+                <div>
+                    <label> Apellidos:</label>
+                    <input type="text" placeholder="Ingrese sus apellidos" id="apellidos" class="formItem">
+                </div>
+                <div>
+                    <label>Telefono:</label>
+                    <input type="text" placeholder="Ingrese su número" name="telefono" id="telefono" class="formItem" />
+
+                </div>
+                <div>
+                    <label> Correo:</label>
+                    <input type="email" placeholder="Ingrese su correo" id="correo" class="formItem">
+                </div>
+                <div class="radio">
+                    <h2>ELIJA SU SERVICIO</h2>
+                    <label>Servicios:</label>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s1" value="SG" />Servicio de guardianía armada a
+                    nivel nacional
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s2" value="SE" />Seguridad Electrónica
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s3" value="SV" />Seguridad VIP
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s4" value="I" />Investigaciones
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s5" value="TV" />Transporte de Valores
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s6" value="CV" />Cursos de
+                    Seguridad
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s7" value="PG" />Planes de gestión de seguridad
+                    </div>
+                    <div class="btnradio">
+                        <input class="ser" type="radio" name="Servicio" id="s8" value="DS" />Diseño de sistemas de seguridad
+                    </div>
+                </div>
+                <button> Enviar </button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+
+            <div class="elemento">
+                <h4>Certificaciones</h4>
+                <p> Certificaciones internacionales de calidad y medio ambiente confirman nuestra
+                    responsabilidad por
+                    otorgar un
+                    servicio diseñado y orientado para cada uno de nuestros clientes. </p>
+            </div>
+
+            <div class="elemento">
+                <h4>Redes sociales</h4>
+                <div class="redes">
+                    <a href="#"><img src="img/face.webp" alt="Facebook"></a>
+                    <a href="#"><img src="img/insta.webp" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/channel/UC2dOAw4yM1pLKIR20HuuInA/featured"><img
+                            src="img/youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="img/twitter.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <h5>Ubicación</h5>
+                <p>Av. Perimetral frente a la Cdla. Lomas de la Florida II en la Coop. Enner Parrales</p>
+            </div>
+        </div>
+        <div class="derechosReservados">
+            <p>
+                Guayaquil- Ecuador © 2022. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.getElementById("formServicio");
+        formServicio.addEventListener('submit', validar);
+
+        function validar(event) {
+            var valido = true;
+            var txtNombres = document.getElementById("nombres");
+            var txtApellidos = document.getElementById("apellidos");
+            var txtTelefono = document.getElementById("telefono");
+            var txtemail = document.getElementById("correo");
+            var radiosServicio = document.getElementsByName("Servicio");
+            var radio1 = document.getElementById("s1");
+            var parrafos = document.getElementsByTagName("p");
+            var letra = /^[a-z ,.'-]+$/i;
+            var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            var telefonoreg = /^[0-9]{10}$/g;
+
+            limpiarMensajes();
+
+            //validacion Nombres
+            if (txtNombres.value === "") {
+                valido = false;
+                mensaje("Nombre es requerido", txtNombres);
+            } else if (!letra.test(txtNombres.value)) {
+                valido = false;
+                mensaje("Nombre solo debe contener letras", txtNombres);
+            } else if (txtNombres.value.length > 20) {
+                valido = false;
+                mensaje("Nombre maximo 20 caracteres", txtNombres);
+            }
+
+            //validacion Apellidos
+            if (txtApellidos.value === "") {
+                valido = false;
+                mensaje("Apellido es requerido", txtApellidos);
+            } else if (!letra.test(txtApellidos.value)) {
+                valido = false;
+                mensaje("Apellido solo debe contener letras", txtApellidos);
+            } else if (txtApellidos.value.length > 20) {
+                valido = false;
+                mensaje("Apellido maximo 20 caracteres", txtApellidos);
+            }
+
+            //validacion teléfono
+            if (txtTelefono.value === "") {
+                valido = false;
+                mensaje("Telefono es requerido", txtTelefono);
+            } else if (!telefonoreg.test(txtTelefono.value)) {
+                valido = false;
+                mensaje("Telefono debe ser de 10 digitos", txtTelefono);
+            }
+
+            //validacion email
+            if (txtemail.value === "") {
+                valido = false;
+                mensaje("Email es requerido", txtemail);
+            } else if (!correo.test(txtemail.value)) {
+                valido = false;
+                mensaje("Email no es correcto", txtemail);
+            }
+
+
+            //validacion radios Servicios
+            var sel = false;
+            for (let i = 0; i < radiosServicio.length; i++) {
+                if (radiosServicio[i].checked) {
+                    sel = true;
+                    break;
+                }
+            }
+            if (!sel) {
+                valido = false;
+                mensaje('Debe seleccionar un Servicio', radiosServicio[0]);
+            }
+
+            function mensaje(cadenaMensaje, elemento) {
+                elemento.focus();
+                var nodoPadre = elemento.parentNode;
+                var nodoMensaje = document.createElement("span");
+                nodoMensaje.textContent = cadenaMensaje;
+                nodoMensaje.setAttribute("class", "mensajeError");
+                nodoPadre.appendChild(nodoMensaje);
+            }
+
+
+            function limpiarMensajes() {
+                var mensajes = document.querySelectorAll(".mensajeError");
+                for (let i = 0; i < mensajes.length; i++) {
+                    mensajes[i].remove();
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
